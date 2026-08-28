@@ -1,0 +1,33 @@
+.intro__grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1fr;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.intro__media img {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  width: 100%;
+}
+
+.intro__copy {
+  max-width: 52ch;
+}
+
+.intro__copy .section-title {
+  margin-bottom: var(--space-3);
+}
+
+@media (max-width: 900px) {
+  .intro__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .intro__media img {
+    aspect-ratio: 16 / 10;
+  }
+}

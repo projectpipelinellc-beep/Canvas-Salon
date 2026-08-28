@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" role="img" aria-label="Salon Interior Photograph placeholder">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F7F1E8"/>
+      <stop offset="100%" stop-color="#E8DECD"/>
+    </linearGradient>
+    <pattern id="p2" width="42" height="42" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="42" height="42" fill="transparent"/>
+      <line x1="0" y1="0" x2="0" y2="42" stroke="#B7A489" stroke-opacity="0.12" stroke-width="42"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#g2)"/>
+  <rect width="1200" height="1500" fill="url(#p2)"/>
+  <rect x="1" y="1" width="1198" height="1498" fill="none" stroke="#B7A489" stroke-opacity="0.35" stroke-width="2"/>
+  <g transform="translate(600, 660)" text-anchor="middle" font-family="Georgia, 'Playfair Display', serif">
+    <circle r="96" fill="none" stroke="#9C6062" stroke-width="1.5" opacity="0.5"/>
+    <text y="5" font-size="78" fill="#2A2521" opacity="0.5" font-style="italic">CS</text>
+  </g>
+  <text x="600" y="1350" text-anchor="middle" font-family="Georgia, serif" font-size="38.4" fill="#2A2521" opacity="0.65">Salon Interior Photograph</text>
+  <text x="600" y="1394.4" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#2A2521" opacity="0.45">Placeholder — pending owner-approved image</text>
+</svg>

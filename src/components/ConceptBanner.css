@@ -1,0 +1,32 @@
+.concept-banner {
+  background: var(--color-charcoal);
+  color: var(--color-ivory);
+  text-align: center;
+  height: var(--banner-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: var(--space-2);
+  position: relative;
+  z-index: 60;
+}
+
+.concept-banner__text {
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  max-width: 90ch;
+}
+
+@media (max-width: 640px) {
+  .concept-banner {
+    height: auto;
+    min-height: var(--banner-height);
+    padding-block: 0.5rem;
+  }
+
+  .concept-banner__text {
+    font-size: 0.72rem;
+    line-height: 1.4;
+  }
+}

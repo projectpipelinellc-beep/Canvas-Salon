@@ -1,0 +1,117 @@
+.visit__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.visit__address {
+  font-style: normal;
+  margin-top: var(--space-3);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-charcoal-soft);
+}
+
+.visit__address a {
+  color: var(--color-rose-dark);
+  font-weight: 600;
+  transition: color var(--transition);
+}
+
+.visit__address a:hover {
+  color: var(--color-rose);
+  text-decoration: underline;
+}
+
+.visit__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.visit__hours {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-sm);
+}
+
+.visit__hours-title {
+  font-size: 1.3rem;
+  margin-bottom: var(--space-3);
+}
+
+.visit__hours table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.visit__hours tr {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.visit__hours tr:last-child {
+  border-bottom: none;
+}
+
+.visit__hours th,
+.visit__hours td {
+  text-align: left;
+  padding: 0.7rem 0.25rem;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: var(--color-charcoal-soft);
+}
+
+.visit__hours th {
+  font-weight: 600;
+  color: var(--color-charcoal);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.visit__hours td {
+  text-align: right;
+}
+
+.visit__hours td.is-closed {
+  color: var(--color-taupe);
+}
+
+.visit__hours tr.is-today {
+  background: var(--color-rose-tint);
+}
+
+.visit__hours tr.is-today th,
+.visit__hours tr.is-today td {
+  color: var(--color-rose-dark);
+  font-weight: 600;
+}
+
+.visit__today-tag {
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: var(--color-rose);
+  color: var(--color-white);
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+@media (max-width: 860px) {
+  .visit__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}
+
+@media (max-width: 460px) {
+  .visit__actions .btn {
+    width: 100%;
+  }
+}

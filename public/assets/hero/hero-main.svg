@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1280" viewBox="0 0 1920 1280" role="img" aria-label="Salon Interior — Hero Image Placeholder placeholder">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F7F1E8"/>
+      <stop offset="100%" stop-color="#EFE6D8"/>
+    </linearGradient>
+    <pattern id="p1" width="42" height="42" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="42" height="42" fill="transparent"/>
+      <line x1="0" y1="0" x2="0" y2="42" stroke="#B7A489" stroke-opacity="0.12" stroke-width="42"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1280" fill="url(#g1)"/>
+  <rect width="1920" height="1280" fill="url(#p1)"/>
+  <rect x="1" y="1" width="1918" height="1278" fill="none" stroke="#B7A489" stroke-opacity="0.35" stroke-width="2"/>
+  <g transform="translate(960, 563.2)" text-anchor="middle" font-family="Georgia, 'Playfair Display', serif">
+    <circle r="102.4" fill="none" stroke="#9C6062" stroke-width="1.5" opacity="0.5"/>
+    <text y="5" font-size="83.2" fill="#2A2521" opacity="0.5" font-style="italic">CS</text>
+  </g>
+  <text x="960" y="1152" text-anchor="middle" font-family="Georgia, serif" font-size="40.96" fill="#2A2521" opacity="0.65">Salon Interior — Hero Image Placeholder</text>
+  <text x="960" y="1198.96" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="25.6" fill="#2A2521" opacity="0.45">Replace with premium salon photography</text>
+</svg>
