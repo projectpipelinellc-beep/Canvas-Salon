@@ -32,15 +32,17 @@ export function ParkingIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-export function DoorIcon(props: SVGProps<SVGSVGElement>) {
+export function WalkInIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <IconBase {...props}>
-      {/* Open door, viewed from above: a hinge post with the door swung
-          out, so the shape reads clearly as "open" rather than a plain
-          rectangle. */}
-      <path d="M6 3.5v17" />
-      <path d="M6 3.5c6.5 1 10.5 3.4 10.5 6.6" />
-      <path d="M6 20.5c6.5-1 10.5-3.4 10.5-6.6" />
+      {/* A person walking in — reads more immediately as "welcome, come
+          on in" than an abstract door glyph. */}
+      <circle cx="12" cy="4.2" r="1.7" fill="currentColor" stroke="none" />
+      <path d="M12 7v5" />
+      <path d="M12 9.3 8.6 11.6" />
+      <path d="M12 9.3 15.6 11.3" />
+      <path d="M12 12 9 19.5" />
+      <path d="M12 12 15.4 19.5" />
     </IconBase>
   );
 }
@@ -70,11 +72,13 @@ export function CafeIcon(props: SVGProps<SVGSVGElement>) {
 export function AccessibleIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <IconBase {...props}>
-      <circle cx="12.5" cy="5.3" r="1.3" fill="currentColor" stroke="none" />
-      <path d="M11 8v4.2l-3.2 3.6" />
-      <path d="M11 10.6h5.4" />
-      <path d="M11.6 12.2l1.8 5.7h3" />
-      <path d="M13.4 17.9a3.6 3.6 0 1 1 1.9-6.5" />
+      {/* Standard wheelchair pictogram, simplified to a few clean strokes
+          so it stays legible at icon size. */}
+      <circle cx="15.2" cy="5" r="1.5" fill="currentColor" stroke="none" />
+      <path d="M15.2 7.2v3.6h-5.4" />
+      <path d="M9.8 10.8 8 16.4" />
+      <circle cx="9" cy="16.6" r="4.3" />
+      <path d="M9.8 10.8 12.6 15" />
     </IconBase>
   );
 }

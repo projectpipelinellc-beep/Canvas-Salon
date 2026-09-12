@@ -4,16 +4,16 @@ import Reveal from "./Reveal";
 import {
   AccessibleIcon,
   CafeIcon,
-  DoorIcon,
   FamilyIcon,
   ParkingIcon,
+  WalkInIcon,
   WifiIcon,
 } from "./AmenityIcons";
 import "./Experience.css";
 
 const ICONS: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
   parking: ParkingIcon,
-  "walk-ins": DoorIcon,
+  "walk-ins": WalkInIcon,
   wifi: WifiIcon,
   "snack-bar": CafeIcon,
   accessible: AccessibleIcon,
