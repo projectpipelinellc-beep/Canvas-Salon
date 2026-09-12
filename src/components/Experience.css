@@ -26,8 +26,13 @@
   height: 52px;
   border-radius: 50%;
   background: var(--color-rose-tint);
-  font-size: 1.4rem;
+  color: var(--color-rose-dark);
   margin-bottom: var(--space-2);
+}
+
+.experience-card__icon svg {
+  width: 24px;
+  height: 24px;
 }
 
 .experience-card__label {
