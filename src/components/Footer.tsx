@@ -1,8 +1,14 @@
-import { business, navLinks, privacyPolicyUrl, social } from "../data/siteData";
+import { business, legal, navLinks, social } from "../data/siteData";
 import "./Footer.css";
 
-export default function Footer() {
+interface FooterProps {
+  /** See Header's isSubpage: standalone pages need home-page-prefixed anchors. */
+  isSubpage?: boolean;
+}
+
+export default function Footer({ isSubpage = false }: FooterProps) {
   const hasSocial = social.instagram || social.facebook || social.email;
+  const sectionHref = (href: string) => (isSubpage ? `/${href}` : href);
 
   return (
     <footer className="site-footer">
@@ -18,7 +24,7 @@ export default function Footer() {
           <ul>
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a href={link.href}>{link.label}</a>
+                <a href={sectionHref(link.href)}>{link.label}</a>
               </li>
             ))}
           </ul>
@@ -28,7 +34,7 @@ export default function Footer() {
           <h3>Plan Your Visit</h3>
           <ul>
             <li>
-              <a href="#visit">Business Hours</a>
+              <a href={sectionHref("#visit")}>Business Hours</a>
             </li>
             <li>
               <a href={business.bookingUrl} target="_blank" rel="noopener noreferrer">
@@ -36,13 +42,10 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              {privacyPolicyUrl ? (
-                <a href={privacyPolicyUrl}>Privacy Policy</a>
-              ) : (
-                <span className="site-footer__placeholder">
-                  Privacy Policy (coming soon)
-                </span>
-              )}
+              <a href={legal.privacyPolicyUrl}>Privacy Policy</a>
+            </li>
+            <li>
+              <a href={legal.termsUrl}>Terms &amp; Conditions</a>
             </li>
           </ul>
         </div>

@@ -354,6 +354,13 @@ export const seo = {
     "Discover Canvas Salon Studio in Mahopac, New York, offering hair, makeup, waxing and brow services. View availability and book your appointment online.",
 };
 
-/* ── Legal / footer placeholders ─────────────────────────────────────── */
+/* ── Legal ────────────────────────────────────────────────────────────
+   Both pages carry the same concept disclosure as the rest of the site
+   and are placeholder legal text — see the developer note at the top of
+   src/pages/PrivacyPolicyPage.tsx and TermsPage.tsx. A qualified
+   professional should review both before this site is published. */
 
-export const privacyPolicyUrl: string | null = null; // PLACEHOLDER — page not yet drafted.
+export const legal = {
+  privacyPolicyUrl: "/privacy.html",
+  termsUrl: "/terms.html",
+};

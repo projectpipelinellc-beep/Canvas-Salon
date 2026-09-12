@@ -1,0 +1,71 @@
+.cookie-consent {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 70;
+  background: var(--color-charcoal);
+  color: var(--color-ivory);
+  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.18);
+  animation: cookie-consent-in 320ms ease both;
+}
+
+@keyframes cookie-consent-in {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cookie-consent {
+    animation: none;
+  }
+}
+
+.cookie-consent__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-block: var(--space-2);
+}
+
+.cookie-consent__text {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--color-beige);
+  max-width: 68ch;
+}
+
+.cookie-consent__text a {
+  color: var(--color-ivory);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.cookie-consent__btn {
+  flex-shrink: 0;
+}
+
+/* Keep clear of the fixed mobile Call/Book bar. */
+@media (max-width: 720px) {
+  .cookie-consent {
+    bottom: var(--mobile-bar-height);
+  }
+
+  .cookie-consent__inner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+    padding-block: var(--space-3);
+  }
+
+  .cookie-consent__btn {
+    width: 100%;
+  }
+}

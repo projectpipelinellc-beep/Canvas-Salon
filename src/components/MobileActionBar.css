@@ -41,6 +41,6 @@
 
   /* Reserve space so page content / footer isn't hidden behind the bar. */
   body {
-    padding-bottom: 76px;
+    padding-bottom: var(--mobile-bar-height);
   }
 }

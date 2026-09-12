@@ -2,7 +2,17 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { business, navLinks } from "../data/siteData";
 import "./Header.css";
 
-export default function Header() {
+interface HeaderProps {
+  /**
+   * Set on standalone pages (e.g. the Privacy Policy / Terms pages) that
+   * live outside the one-page layout. Section anchors then resolve back to
+   * the home page ("/#services") instead of scrolling the current page
+   * ("#services"), which has no matching section.
+   */
+  isSubpage?: boolean;
+}
+
+export default function Header({ isSubpage = false }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
@@ -59,6 +69,9 @@ export default function Header() {
     setMenuOpen(false);
   };
 
+  const homeHref = isSubpage ? "/" : "#top";
+  const sectionHref = (href: string) => (isSubpage ? `/${href}` : href);
+
   return (
     <header className="site-header">
       {/*
@@ -69,7 +82,7 @@ export default function Header() {
       */}
       <div className="site-header__bar" ref={barRef}>
         <div className="container site-header__row">
-          <a href="#top" className="site-header__logo" aria-label="Canvas Salon Studio, back to top">
+          <a href={homeHref} className="site-header__logo" aria-label="Canvas Salon Studio, back to top">
             Canvas <span>Salon Studio</span>
           </a>
 
@@ -77,7 +90,7 @@ export default function Header() {
             <ul>
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href}>{link.label}</a>
+                  <a href={sectionHref(link.href)}>{link.label}</a>
                 </li>
               ))}
             </ul>
@@ -127,7 +140,7 @@ export default function Header() {
           <ul>
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a href={link.href} onClick={closeMenu} tabIndex={menuOpen ? 0 : -1}>
+                <a href={sectionHref(link.href)} onClick={closeMenu} tabIndex={menuOpen ? 0 : -1}>
                   {link.label}
                 </a>
               </li>

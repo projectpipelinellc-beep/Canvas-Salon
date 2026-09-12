@@ -220,6 +220,6 @@
    mobile call/book bar (see MobileActionBar.css). */
 @media (max-width: 720px) {
   .mobile-menu {
-    padding-bottom: calc(var(--space-4) + 76px);
+    padding-bottom: calc(var(--space-4) + var(--mobile-bar-height));
   }
 }
